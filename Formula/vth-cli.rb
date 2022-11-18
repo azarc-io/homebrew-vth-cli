@@ -10,16 +10,16 @@ class VthCli < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Darwin-arm64.tar.gz"
-      sha256 "82e999e5993c2c113ea8c5fd082e28e767e924954825312d5fe520db63a3af55"
+      url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Darwin-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "9923041cb5f113642753a42f628399949b6c27140a438206b554ea302f56fc79"
 
       def install
         bin.install "vth-cli-1.0.0-darwin-arm64"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Darwin-x86_64.tar.gz"
-      sha256 "82c16cca51d849d9b853420184cc14168afd213a630925add25a36a4d7767631"
+      url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Darwin-x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "436d654cf69224d84c528be572e928d4df2fcf9bffb1088795c3dcb40c224000"
 
       def install
         bin.install "vth-cli-1.0.0-darwin-amd64"
@@ -29,16 +29,16 @@ class VthCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Linux-arm64.tar.gz"
-      sha256 "8d2120731cbb9b28e787552d4b3ea9914b96f794716023bc644306d43637c847"
+      url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Linux-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "c3c912c7b8ce83e1084f464a7f5df368132b89ad8d0c325cf4fbf29c6829f4d9"
 
       def install
         bin.install "vth-cli-1.0.0-linux-arm64"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Linux-x86_64.tar.gz"
-      sha256 "cea088668410af904f62463aab026941584e38dcc039a87577a4e67f8f63b247"
+      url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Linux-x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "e0500d6792dc58a102e72354c60f99f5ba7c47539b1569d745ac038bf29e7ead"
 
       def install
         bin.install "vth-cli-1.0.0-linux-amd64"
