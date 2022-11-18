@@ -12,7 +12,7 @@ class VthCli < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Linux-arm64.tar.gz"
-      sha256 "4f44759f7df22c42f079aeafe47f84f36c6ce270bf55a48d1d87acb7045cad56"
+      sha256 "c1fec2e31fcb4467b4a7546c2e2b2940351e9b3608667920bf8c24b642a1d8ce"
 
       def install
         bin.install "vth-cli-1.0.0-linux-arm64"
@@ -20,7 +20,7 @@ class VthCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Linux-x86_64.tar.gz"
-      sha256 "ab28a9c54d9e628cffc388b660b0e74680256c655a5602b1185fc09bd3da70f7"
+      sha256 "cf4f948016fb0ce4270de333454793127f503a3d01a4f011ad42a043df16cf19"
 
       def install
         bin.install "vth-cli-1.0.0-linux-amd64"
