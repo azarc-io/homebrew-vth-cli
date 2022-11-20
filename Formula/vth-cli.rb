@@ -5,21 +5,21 @@
 class VthCli < Formula
   desc "Verathread CLI"
   homepage "https://azarc.io/"
-  version "1.0.0"
+  version "1.3.0"
   license "Apache"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.0.0/vth-cli-1.0.0-Darwin-arm64.tar.gz"
-      sha256 "9a09c1996c7e98cbcf17433b28b59d042803073a37b6d051b7a697b629d30bd6"
+    if Hardware::CPU.intel?
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.3.0/vth-cli-1.3.0-Darwin-x86_64.tar.gz"
+      sha256 "23cdc17de841799d4aa556eb7795b59e413c5dbb4d52e973d2b094b311bebe80"
 
       def install
         bin.install "vth2"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.0.0/vth-cli-1.0.0-Darwin-x86_64.tar.gz"
-      sha256 "64d8078880009a0486a6dd6730eb1cd80955339f58165d538144227aea946847"
+    if Hardware::CPU.arm?
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.3.0/vth-cli-1.3.0-Darwin-arm64.tar.gz"
+      sha256 "c43015b9a6768cc9ad8f602dcfa34b40d4c8b6c649e2d018fa0a9c06b6a505b8"
 
       def install
         bin.install "vth2"
@@ -29,16 +29,16 @@ class VthCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.0.0/vth-cli-1.0.0-Linux-arm64.tar.gz"
-      sha256 "d80114cd45305f2b46f79131ddf998237c057daeba3714bad560634b74980426"
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.3.0/vth-cli-1.3.0-Linux-arm64.tar.gz"
+      sha256 "ac1ec8522bad5612c236497a310dafbeae0cfb800df025f3c9e5f79b7e1497a8"
 
       def install
         bin.install "vth2"
       end
     end
     if Hardware::CPU.intel?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.0.0/vth-cli-1.0.0-Linux-x86_64.tar.gz"
-      sha256 "a4497f55f60366ab47d8e8b0a7dbf6fcdb5a265b3d4e4db945ac1a29ed2ebd5c"
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.3.0/vth-cli-1.3.0-Linux-x86_64.tar.gz"
+      sha256 "194cc2350962b40cd7d237cb7cff8cb8cac15c4cd9f471d68d388ca0a94d72cf"
 
       def install
         bin.install "vth2"
