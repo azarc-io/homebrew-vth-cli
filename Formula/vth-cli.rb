@@ -11,7 +11,7 @@ class VthCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.0.0/vth-cli-1.0.0-Darwin-arm64.tar.gz"
-      sha256 "59e6906273197f7ae0e96772a1f2cb585f8c3fd586428d514c69f13d6ea61068"
+      sha256 "9a09c1996c7e98cbcf17433b28b59d042803073a37b6d051b7a697b629d30bd6"
 
       def install
         bin.install "vth2"
@@ -19,7 +19,7 @@ class VthCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.0.0/vth-cli-1.0.0-Darwin-x86_64.tar.gz"
-      sha256 "17538899cfbd620d5ce8ee44599de20031ace720d14401af7e62758915a463bc"
+      sha256 "64d8078880009a0486a6dd6730eb1cd80955339f58165d538144227aea946847"
 
       def install
         bin.install "vth2"
@@ -30,7 +30,7 @@ class VthCli < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.0.0/vth-cli-1.0.0-Linux-arm64.tar.gz"
-      sha256 "1fe7516378f0e45a29644cf089085210c6dd70138b4681aac8f36fd7fc6a5531"
+      sha256 "d80114cd45305f2b46f79131ddf998237c057daeba3714bad560634b74980426"
 
       def install
         bin.install "vth2"
@@ -38,7 +38,7 @@ class VthCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.0.0/vth-cli-1.0.0-Linux-x86_64.tar.gz"
-      sha256 "b9d47fefaaf70ac484f3a02659176d2c4cf7d9339dc851f66644712c8cd81fb7"
+      sha256 "a4497f55f60366ab47d8e8b0a7dbf6fcdb5a265b3d4e4db945ac1a29ed2ebd5c"
 
       def install
         bin.install "vth2"
