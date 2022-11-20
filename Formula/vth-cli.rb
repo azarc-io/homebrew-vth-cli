@@ -12,7 +12,7 @@ class VthCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Darwin-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "4861b2258351015c566af754dfda5a375c6665ba3dea66b7aeeda7541869d79d"
+      sha256 "47f351f1cf3e48659ad927ea6acc22ed330c7d1fa82df169cf30446ed092965c"
 
       def install
         bin.install "vth2"
@@ -20,7 +20,7 @@ class VthCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Darwin-x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "db52eb20e1f1f5085717a4aa6cf6d5bafbccd4d77c387457e57da6b13de853fb"
+      sha256 "086f585f13d1bafe3b20bcfed7512d7bb9c0fdf87c5633ccdd3760860a0e55ae"
 
       def install
         bin.install "vth2"
@@ -31,7 +31,7 @@ class VthCli < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Linux-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "aa59cd18617913ac48078fcc6509d891746f412f570e742cf25bf0c873b2a025"
+      sha256 "1c82c046b4bf1ed2aec4f1ec017e740ff88bfa131b965c0fa99f7093ce599742"
 
       def install
         bin.install "vth2"
@@ -39,7 +39,7 @@ class VthCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/azarc-io/vth-cli/releases/download/v1.0.0/vth-cli-1.0.0-Linux-x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "ca1152a63ee1caff1d8de320d457ee59a9fe6973dec36ce6c4e8239e5ec54673"
+      sha256 "d95922df3eb0a620517177b0324b50235cc5a5f34c229dfdcf93177ef3ddf790"
 
       def install
         bin.install "vth2"
