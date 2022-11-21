@@ -5,21 +5,21 @@
 class VthCli < Formula
   desc "Verathread CLI"
   homepage "https://azarc.io/"
-  version "1.22.0"
+  version "1.23.0"
   license "Apache"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.22.0/vth-cli-1.22.0-Darwin-x86_64.tar.gz"
-      sha256 "a28ef75308ec7b0f2cd51ff6cdbdc8819a2ed56b84037418ac359f563a3cbc54"
+    if Hardware::CPU.arm?
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.23.0/vth-cli-1.23.0-Darwin-arm64.tar.gz"
+      sha256 "72023176ea4caf1b193a038411f6bacf01432a42692e03362d23a31b55ccf3d1"
 
       def install
         bin.install "vth2"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.22.0/vth-cli-1.22.0-Darwin-arm64.tar.gz"
-      sha256 "11b7f1dcc5b05fb39411eedaf71dbafc1ef1d564cc3ce5dc54debca2acbcc685"
+    if Hardware::CPU.intel?
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.23.0/vth-cli-1.23.0-Darwin-x86_64.tar.gz"
+      sha256 "a1653ae23bfdbbaf31007a9985d0a63d5abebf658bc2fd8286ea9348717de853"
 
       def install
         bin.install "vth2"
@@ -29,16 +29,16 @@ class VthCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.22.0/vth-cli-1.22.0-Linux-arm64.tar.gz"
-      sha256 "b3c0965860b53c55eaf125ed1d7ab70ddc7f072421ae0bf3d046f72f3ff49336"
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.23.0/vth-cli-1.23.0-Linux-arm64.tar.gz"
+      sha256 "303c917d8696b45f2245f653070002c450e30aa3b34626d6c915f52a7aa35fe3"
 
       def install
         bin.install "vth2"
       end
     end
     if Hardware::CPU.intel?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.22.0/vth-cli-1.22.0-Linux-x86_64.tar.gz"
-      sha256 "5e9de50e389b248f0b5a40228525b491bc065436b9b24dcc3e69148b026c12bd"
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.23.0/vth-cli-1.23.0-Linux-x86_64.tar.gz"
+      sha256 "d8ffdc93cb2514087e74fe23a4edccda663d47d0cd280739731b3a73cf4d859b"
 
       def install
         bin.install "vth2"
