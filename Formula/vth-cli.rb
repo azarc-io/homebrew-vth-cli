@@ -5,21 +5,21 @@
 class VthCli < Formula
   desc "Verathread CLI"
   homepage "https://azarc.io/"
-  version "1.18.0"
+  version "1.19.0"
   license "Apache"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.18.0/vth-cli-1.18.0-Darwin-arm64.tar.gz"
-      sha256 "6c80764006096dca28df9f7b4dcff9ccf3c3b5e8f3b64b777f8c3759b38d6da2"
+    if Hardware::CPU.intel?
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.19.0/vth-cli-1.19.0-Darwin-x86_64.tar.gz"
+      sha256 "306fbf060fc88b2149754db4971c423d610ad737407456cd8f1963d39bbb1dc1"
 
       def install
         bin.install "vth2"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.18.0/vth-cli-1.18.0-Darwin-x86_64.tar.gz"
-      sha256 "3ffc029f87056a6478462a33f318d0be60029fd9378d848e80c2ba01b0b66bc4"
+    if Hardware::CPU.arm?
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.19.0/vth-cli-1.19.0-Darwin-arm64.tar.gz"
+      sha256 "c28161d55a493fe8e4e6ba3b05f4a9c80548c1e86abb12585a06bf571f1032bf"
 
       def install
         bin.install "vth2"
@@ -28,17 +28,17 @@ class VthCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.18.0/vth-cli-1.18.0-Linux-x86_64.tar.gz"
-      sha256 "a08237d7b467fff01b5610a81f431e711df91d157568941d89f4f9bcb78fe294"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.19.0/vth-cli-1.19.0-Linux-arm64.tar.gz"
+      sha256 "19225e61ca607d8ab3960f12a00c757a0f74ad52632bd960ba5941f41deeb170"
 
       def install
         bin.install "vth2"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.18.0/vth-cli-1.18.0-Linux-arm64.tar.gz"
-      sha256 "68880314e04852c16c32cdae8cecb9307160c650aa6c84e84379fc42ef9c3d3e"
+    if Hardware::CPU.intel?
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.19.0/vth-cli-1.19.0-Linux-x86_64.tar.gz"
+      sha256 "0666595d48388ef14a9d0c02cf11e5d40d490170fab9cbbaa8c428f46d4c0be9"
 
       def install
         bin.install "vth2"
