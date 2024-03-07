@@ -5,21 +5,21 @@
 class VthCli < Formula
   desc "Verathread CLI"
   homepage "https://azarc.io/"
-  version "1.72.0"
+  version "1.73.0"
   license "Apache"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.72.0/vth-cli-1.72.0-Darwin-arm64.tar.gz"
-      sha256 "c06dfd00e2153418ab947081e5a637b4f2fa64515a889ed2e4c7f19054bd4821"
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.73.0/vth-cli-1.73.0-Darwin-arm64.tar.gz"
+      sha256 "040c641d8e83afe0f3b200d6cc35fa6ae144c714ee5cfc7fa0c234b5925b8559"
 
       def install
         bin.install "vth2"
       end
     end
     if Hardware::CPU.intel?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.72.0/vth-cli-1.72.0-Darwin-x86_64.tar.gz"
-      sha256 "aab563a220b1b74b00fce4bb783c51af73d399aa03d513926f91c873bd3b191c"
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.73.0/vth-cli-1.73.0-Darwin-x86_64.tar.gz"
+      sha256 "eb03bc8242134ba7e79b104f0b97887ee06aebb60b497e03dcf708fd5321e9c8"
 
       def install
         bin.install "vth2"
@@ -29,16 +29,16 @@ class VthCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.72.0/vth-cli-1.72.0-Linux-x86_64.tar.gz"
-      sha256 "fad0638ec2216bff66a7ae4ab1bd5d399fb89ca9931f0ac7a2630c9530d9dd89"
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.73.0/vth-cli-1.73.0-Linux-x86_64.tar.gz"
+      sha256 "187b1ac1bda381014033be9ff43d5738bab0a1ee5cf75ed36d30a03123e765a2"
 
       def install
         bin.install "vth2"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.72.0/vth-cli-1.72.0-Linux-arm64.tar.gz"
-      sha256 "b131857f9ea5ae37c43fe8e08b17a9371ec6eeb6d6d1d57de7cd9f31b119770c"
+      url "https://vth-artifacts.s3.eu-west-1.amazonaws.com/cli_v2/v1.73.0/vth-cli-1.73.0-Linux-arm64.tar.gz"
+      sha256 "a7d5a3b4ed546819366f7d87f29872ad43228f75e22aaca031703bab222d53b0"
 
       def install
         bin.install "vth2"
